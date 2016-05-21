@@ -4,12 +4,10 @@ require 'rspec/its'
 
 describe Item do
 
-
 its(:weight) {should == 0}
-
-xit "has weight 3" do
-	expect.to eq 3
-end
+its(:price) {should == 0}
+its(:slot) {should == "none"}
+its(:group) {should == "none"}
 
 xit "is invalid without name" do
 	expect(item).to be_valid
