@@ -1,4 +1,22 @@
 <p id="notice"><%= notice %></p>
 
+<table>
+	<tr>
+		<td><%= @item.name %></td>
+		<td>PRICE <%= @item.price %> GP</td>
+	</tr>
+	<tr>
+		<td>AURA</td>
+		<td>CL</td>
+		<td>WEIGHT <%= @item.weight %></td>
+</table>
+<%= @item.description %>
+<table>
+	<tr>
+		<td>CONSTRUCTION REQUIREMENTS</td>
+		<td>COST</td>
+	</tr>
+</table>
+
 <%= link_to 'Edit', edit_item_path(@item) %> |
 <%= link_to 'Back', items_path %>
