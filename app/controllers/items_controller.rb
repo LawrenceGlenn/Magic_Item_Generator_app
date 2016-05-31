@@ -11,6 +11,10 @@ class ItemsController < ApplicationController
   # GET /items/1.json
   def show
     @item = Item.find(params[:id])
+    respond to do |format|
+      format.html
+      format.json {render json: @item}
+    end
   end
 
   # GET /items/new
