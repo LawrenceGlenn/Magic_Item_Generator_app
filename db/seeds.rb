@@ -10,13 +10,13 @@
 
 require 'roo'
 
-	ex = Roo::Excelx.new("public/pathfinder-list-equipment.xlsx")
+	ex = Roo::Excelx.new("/home/lawrence/Magic_Item_Generator_app/db/Pathfinder-Rings.xlsx")
 	ex.default_sheet = ex.sheets[0]				#Mention the sheet number (0 is the first sheet, etc.)
-	3.upto(4) do |line|
+	2.upto(3000) do |line|
 		name = ex.cell(line, 'A')			#Column A in spreedsheet
-		weight = ex.cell(line, 'P')
-		cost = ex.cell(line, 'J')
-
-		item = Item.create(name: name)
+		weight = ex.cell(line, 'B')
+		price = ex.cell(line, 'J')
+		
+		name.nil? || item = Item.create(name: name)
 
 end
